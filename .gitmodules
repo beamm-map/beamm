@@ -1,0 +1,3 @@
+[submodule "beamm-dataset"]
+	path = beamm-dataset
+	url = https://github.com/beamm-map/beamm-dataset.git

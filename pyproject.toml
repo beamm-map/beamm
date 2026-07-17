@@ -1,0 +1,32 @@
+[project]
+name = "beamm"
+version = "0.1.0"
+description = "Bayesian Expandable Ambient Magnetic Mapping: Continual Learning with a Physics-Constrained Bayesian Neural Network is a framework for mapping indoor ambient magnetic fields. The system implments a continual learning BNN that enables fast interpolations of magnetic fields while maintaining constraints set by Maxwells equations."
+requires-python = ">=3.10"
+dependencies = [
+    "hamiltorch",
+    "torch",
+    "numpy<2.0.0",
+    "scikit-learn>=1.7.2",
+    "tqdm>=4.67.3",
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "ipykernel>=7.3.0",
+]
+
+[tool.uv.sources]
+hamiltorch = { git = "https://github.com/AdamCobb/hamiltorch" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages=["beamm"]
+include = ["*.py","*.toml",]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/beamm-dataset",
+    "/examples",
+]

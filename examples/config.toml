@@ -1,0 +1,22 @@
+[params]
+kbnn_noise_mult = 1.3
+phi_noise_floor = 1e-6
+kbnn_epochs = 1
+kbnn_subsample = 50
+sigma_hmc_beamm = 0.17
+prior_var_scale = 3.0
+sigma_1d = 0.1
+
+hidden = 128
+
+adam_lr = 1e-3
+adam_steps = 2000
+
+nuts_samples_beamm = 50
+nuts_burn_beamm = 10
+nuts_step_beamm = 3e-6
+nuts_step_refresh = 3e-2
+nuts_steps_per_sample_beamm = 30
+nuts_accept_beamm = 0.8
+
+n_eff_threshold = 0.5
